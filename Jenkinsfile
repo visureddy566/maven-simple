@@ -26,6 +26,7 @@ pipeline {
           steps {
             git 'https://github.com/jglick/simple-maven-project-with-tests.git'  
             sh "mvn -Dmaven.test.failure.ignore=true clean install"
+            sh "java -cp target/simple-maven-project-with-tests-1.0-SNAPSHOT.jar com.github.jitpack.App"
             
           }
           post {
