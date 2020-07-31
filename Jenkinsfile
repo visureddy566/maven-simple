@@ -9,7 +9,7 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            // Get some code from a GitHub repository
+            // Get some code from a GitHub repository 
             git 'https://github.com/jglick/simple-maven-project-with-tests.git'
             sh "mvn -Dmaven.test.failure.ignore=true clean compile"
          }
