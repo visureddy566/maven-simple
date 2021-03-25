@@ -1,18 +1,19 @@
 pipeline {
-    agent any
-
-    tools {
-        maven "maven-3"
-    }
-
+    agent any 
     stages {
-        stage ('Compile')
-        steps {
-            sh "mvn clean compile"
-        }
-        stages ('Test') {
+        stage('Build') { 
             steps {
-                sh "mvn clean test"
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
             }
         }
     }
