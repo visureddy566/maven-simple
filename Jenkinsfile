@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh "clean compile"
+                sh "clean compile package"
                 // 
             }
         }
